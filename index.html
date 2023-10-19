@@ -7,15 +7,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
     />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <title>Personal Portfolio | Eliana Atasiei</title>
   </head>
   <body>
+    <button class="scroll-to-top" onclick="scrollToTop()"><i class="ri-arrow-up-double-fill"></i></button>
     <div id="cursor"></div>
     <nav>
       <div class="nav-logo">
-        <a href="#">
-          <img src="images/logo.svg">
+        <a href="#" </a>
+        <img src="images/logo.svg" onclick="location.reload(); return false;">
       </div>
 
       <ul class="nav-links">
@@ -31,7 +33,10 @@
         <span class="blur"></span>
         <span class="blur"></span>
         <h4></h4>
-        <h1>Hi, I'm <span class="pink-wording">Eliana</span>, Web Developer<span class="dot">.</span></h1>
+        <h1>
+          Hi, I'm <span class="pink-wording">Eliana</span>,<br />
+          <span>Web Developer</span>
+        </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
           quibusdam voluptatem nostrum repellat, recusandae molestiae eaque
@@ -44,6 +49,39 @@
         <img src="images/logo-header.svg" />
       </div>
     </header>
+    <section class="container">
+      <h2 class="header">PROJECTS</h2>
+      <div class="projects">
+
+        <div class="card">
+          <span><i class="ri-service-fill"></i></span>
+          <h4>Destroy Lonely</h4>
+          <p>This is a description on the project, only an example for now.</p>
+          <a href="#">View Live ></a>
+        </div>
+
+        <div class="card">
+          <span><i class="ri-service-fill"></i></span>
+          <h4>Idea number two</h4>
+          <p>This is a description on the project, don't make it too long and don't make it too short.</p>
+          <a href="#">View Live ></a>
+        </div>
+
+        <div class="card">
+          <span><i class="ri-service-fill"></i></span>
+          <h4>Project number three</h4>
+          <p>This is a description on the project, only an example for now. Add more lines to be different.</p>
+          <a href="#">View Live ></a>
+        </div>
+
+        <div class="card">
+          <span><i class="ri-service-fill"></i></span>
+          <h4>Fourth One</h4>
+          <p>Here goes a short description. Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+          <a href="#">View Live ></a>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
