@@ -207,24 +207,10 @@ section .header {
 .projects {
   width: 100%;
   margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
-}
-
-.projects .card {
-  width: 33.33%;
-  padding: 2rem 2rem;
-  background-color: #ffffff;
-  color: #00000075;
   display: flex;
   flex-direction: column;
-  border: 1px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  gap: 1rem;
 }
-
 .projects .card h4 {
   color: black;
 }
@@ -252,10 +238,4 @@ section .header {
   background-color: transparent;
   border: 1px solid #e07bae;
   box-shadow: 2px 2px 4px #e07bae;
-}
-div.scrollmenu {
-  display: flex;
-  width: 100%;
-  overflow: auto;
-  justify-content: space-between;
 }
