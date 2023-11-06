@@ -197,45 +197,32 @@ section .header {
   font-weight: 600;
 }
 
-.sub-header {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  color: #00000038;
-}
-
 .projects {
-  width: 100%;
-  margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.projects .card h4 {
-  color: black;
+  height: auto;
+  white-space: nowrap;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  display: flex; /* Make the projects flex items */
 }
 
-.projects .card p {
-  margin: 1rem 0 1rem 0;
+.card {
+  background-color: #fff;
+  width: 300px; /* Set a fixed width for each card */
+  margin-right: 10px; /* Add some space between cards */
 }
 
-.projects .card:hover {
-  background-color: #323232;
-  color: #fff;
+.content {
+  padding: 20px;
 }
 
-.projects .card .content {
-  flex: 1;
-  margin-bottom: 2rem;
+.card h4 {
+  font-size: 1.5em; /* Increase the font size for the project names */
+  margin-bottom: 10px; /* Add some space between the title and paragraph */
 }
 
-.projects .btn {
-  padding: 1rem 1rem;
+.card p {
+  font-size: 1em; /* Set a font size for the project description */
 }
 
-.projects .repo {
-  color: #e07bae;
-  background-color: transparent;
-  border: 1px solid #e07bae;
-  box-shadow: 2px 2px 4px #e07bae;
+.card .btn {
+  margin-top: 10px; /* Add some space between the paragraph and buttons */
 }
