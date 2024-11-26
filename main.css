@@ -18,7 +18,7 @@
   /*HEIGHTS, WIDTHS*/
   --height-header: 120px;
   /* PADDINGS */
-  --padding-container: 100px 100px 120px 100px;
+  --padding-container: 40px 100px 150px 100px;
   --padding-header: 20px 80px;
   --padding-about-section: 150px 200px;
   --padding-proccess: 130px 100px 150px 100px;
@@ -230,7 +230,7 @@ header {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 50px;
+  gap: 40px;
 }
 .nav-menu a {
   text-decoration: none;
@@ -267,7 +267,7 @@ header {
 /****** HERO STYLES ******/
 
 .hero {
-  height: calc(100vh - var(--height-header));
+  height: auto;
   padding: var(--padding-container);
   background-color: white;
   width: 100%;
