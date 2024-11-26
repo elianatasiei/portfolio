@@ -366,7 +366,7 @@ header {
 /****** CONTACT SECTION ******/
 
 #warningMessage {
-  display: none; /* Hidden by default */
+  display: none;
   color: red;
   font-weight: bold;
   margin-top: 20px;

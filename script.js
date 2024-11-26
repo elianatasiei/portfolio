@@ -2,8 +2,18 @@ const form = document.getElementById("contactForm");
 const emailInput = document.getElementById("email");
 const warningMessage = document.getElementById("warningMessage");
 
+// Prevent form from submitting multiple times
+let formSubmitted = false;
+
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent form from submitting
+  e.preventDefault();
+
+  // Prevent submitting if the form has already been submitted
+  if (formSubmitted) {
+    return; // Exit if the form has already been submitted
+  }
+
+  formSubmitted = true; // Mark the form as submitted
 
   // Clear previous error messages
   warningMessage.style.display = "none"; // Hide warning message by default
@@ -12,6 +22,7 @@ form.addEventListener("submit", function (e) {
   const name = document.getElementById("name").value;
   const email = emailInput.value;
   const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
 
   // Simple email validation pattern
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -28,16 +39,41 @@ form.addEventListener("submit", function (e) {
   }
 
   // Check if all required fields are filled
-  if (!name || !email || !subject || !emailPattern.test(email)) {
+  if (!name || !email || !subject || !message) {
     formIsValid = false;
+    warningMessage.style.display = "block"; // Show warning message
   }
 
-  // Show the warning message if form is invalid
-  if (!formIsValid) {
-    warningMessage.style.display = "block"; // Show warning message
+  // If the form is valid, send the email
+  if (formIsValid) {
+    sendMail(); // Call the function to send the mail
   } else {
-    // If form is valid, you can proceed with form submission
-    alert("Form submitted successfully!");
-    form.reset(); // Optionally reset the form here
+    formSubmitted = false; // Reset formSubmitted flag if validation fails
   }
 });
+
+// Send mail functionality
+function sendMail() {
+  let parms = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+
+  // Send the email using EmailJS
+  emailjs
+    .send("service_0c4bae8", "template_ut5ui33", parms)
+    .then(function () {
+      alert("Email has been sent! I will get back to you shortly.");
+      //reset the form after successful submission
+      form.reset();
+      warningMessage.style.display = "none"; // Hide warning message
+      formSubmitted = false; // Reset formSubmitted flag after successful submission
+    })
+    .catch(function (error) {
+      alert("There was an error sending the email. Please try again.");
+      console.log(error);
+      formSubmitted = false; // Reset flag on error as well
+    });
+}
