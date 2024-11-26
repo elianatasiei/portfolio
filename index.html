@@ -115,7 +115,13 @@
         <h1>Let's talk</h1>
         <div class="contact-form">
           <form action="action_page.php">
-            <input type="text" id="name" name="name" placeholder="Name" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
 
             <input
               type="email"
@@ -123,6 +129,11 @@
               name="email"
               placeholder="E-mail"
               autocomplete="e-mail"
+              required
+              required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Please enter a valid email address"
+            />
             />
 
             <select id="Request" name="request">
@@ -136,6 +147,7 @@
               name="subject"
               placeholder="Message"
               style="height: 200px"
+              required
             ></textarea>
 
             <input type="submit" value="Submit" />
