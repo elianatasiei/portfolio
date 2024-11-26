@@ -114,7 +114,7 @@
       <div id="contactform" class="contact-form-container">
         <h1>Let's talk</h1>
         <div class="contact-form">
-          <form action="action_page.php">
+          <form id="contactForm">
             <input
               type="text"
               id="name"
@@ -130,10 +130,8 @@
               placeholder="E-mail"
               autocomplete="e-mail"
               required
-              required
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               title="Please enter a valid email address"
-            />
             />
 
             <select id="Request" name="request">
@@ -151,9 +149,13 @@
             ></textarea>
 
             <input type="submit" value="Submit" />
+            <div id="warningMessage" style="display: none; color: red">
+              Please fill out all fields correctly!
+            </div>
           </form>
         </div>
       </div>
+
       <footer>
         <div class="contact">
           <h3>Let's talk!</h3>
@@ -175,6 +177,6 @@
         </div>
       </footer>
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

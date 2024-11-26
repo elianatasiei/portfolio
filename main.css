@@ -364,6 +364,14 @@ header {
 }
 
 /****** CONTACT SECTION ******/
+
+#warningMessage {
+  display: none; /* Hidden by default */
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 .contact-form-container {
   padding: var(--pading-contact-form);
   text-align: center;
@@ -395,7 +403,6 @@ header {
     resize: vertical;
   }
 
-  /* Style the submit button with a specific background color etc */
   input[type="submit"] {
     background-color: #000000;
     font-size: var(--font-size-large);
@@ -406,7 +413,6 @@ header {
     cursor: pointer;
   }
 
-  /* When moving the mouse over the submit button, add a darker green color */
   input[type="submit"]:hover {
     background-color: #000000;
   }
