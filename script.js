@@ -1,3 +1,37 @@
+//------------------------- burger menu
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerMenu = document.querySelector(".burger-menu");
+  const navMenu = document.getElementById("navMenu");
+
+  burgerMenu.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+    burgerMenu.classList.toggle("active");
+  });
+});
+
+// Create an IntersectionObserver to trigger the animation
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  },
+  {
+    threshold: 0.5, // Triggers when 50% of the element is visible
+  }
+);
+
+// Observe each paragraph element
+const textElements = document.querySelectorAll(".animated");
+textElements.forEach((element) => {
+  observer.observe(element);
+});
+
+//---------------------FORM FUNCTIONALITY
+
 const form = document.getElementById("contactForm");
 const emailInput = document.getElementById("email");
 const warningMessage = document.getElementById("warningMessage");

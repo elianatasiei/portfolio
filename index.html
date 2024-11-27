@@ -5,70 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eliana Atasiei | Web Development Portfolio</title>
     <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="mobile-nav.css" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Love+Ya+Like+A+Sister&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <a href="#top" class="scroll-to-top">
+    <a href="#top" class="scroll-to-top" aria-label="Back to top">
       <span class="arrow">^</span>
     </a>
-    <div class="main-content">
-      <header class="header">
-        <div class="header-left">
-          <img src="images/eliana-logo.svg" alt="logo eliana atasiei" />
+    <header>
+      <div class="logo">
+        <img src="eliana-logo.svg" alt="eliana atasiei logo" />
+      </div>
+      <nav>
+        <div class="burger-menu">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
         </div>
-        <div class="header-right">
-          <ul class="nav-menu">
-            <li class="home menu-item"><a href="#top">home</a></li>
-            <li id="about" class="about menu-item">
-              <a href="#about">about</a>
-            </li>
-            <li id="blog" class="blog menu-item">
-              <a href="#blog">blog</a>
-            </li>
-            <li id="projects" class="projects menu-item">
-              <a href="#projects">projects</a>
+        <ul class="nav-menu" id="navMenu">
+            <li class="home menu-item"><a href="#top">Home</a></li>
+            <li class="about menu-item"><a href="#about">About</a></li>
+            <li class="blog menu-item"><a href="blog.html">Blog</a></li>
+            <li class="projects menu-item">
+              <a href="#projects">Projects</a>
               <div class="soon">SOON</div>
             </li>
-
-            <li id="contact" class="contact menu-item">
-              <a href="#contactform">contact</a>
+            <li class="contact menu-item">
+              <a href="#contactform">Contact</a>
             </li>
           </ul>
-        </div>
-      </header>
-      <div class="hero">
+      </nav>
+    </header>
+      <section class="hero">
         <div class="col-hero col-left">
           <h1>Hi, I'm Eliana.</h1>
           <p>
             I <span class="hero-span">design</span> and
-            <span class="hero-span">build</span> website stuff. Welcome.
+            <span class="hero-span">build</span> websites. Welcome.
           </p>
-          <button class="hero-btn">let's connect</button>
-          <button class="cv-btn">download CV</button>
+          <button class="hero-btn">Let's Connect</button>
+          <button class="cv-btn">Download CV</button>
         </div>
         <div class="col-hero col-right">
-          <img src="images/hero-img.svg" />
+          <img src="images/hero-img.svg" alt="Image of Eliana Atasiei" />
         </div>
-      </div>
-      <div class="about-section">
+      </section>
+
+      <section class="about-section" id="about">
         <h2>About</h2>
         <p>
           I’m a web developer who got started by teaching myself how to build
@@ -77,16 +66,19 @@
           hands-on experience, I’ve refined my skills and now create websites
           that are both functional and user-friendly.
         </p>
-        <button class="explore-blog">explore my blog</button>
-      </div>
-      <div class="proccess">
-        <h1>The proccess</h1>
+        <button class="explore-blog">
+          <a href="blog.html">Explore My Blog</a>
+        </button>
+      </section>
+
+      <section class="proccess">
+        <h1>The Process</h1>
         <div class="col-container">
           <div class="col-proccess col-1">
             <h1 class="step step-1">
               1<span class="col-proccess-dot">.</span>
             </h1>
-            <img src="images/step1.svg" />
+            <img src="images/step1.svg" alt="Step 1: Design" />
             <p>
               My process begins with creating custom designs based on what I’ve
               learned about user needs and good design.
@@ -96,7 +88,7 @@
             <h1 class="step step-2">
               2<span class="col-proccess-dot">.</span>
             </h1>
-            <img src="images/step2.svg" />
+            <img src="images/step2.svg" alt="Step 2: Development" />
             <p>
               Once the design is ready, I move into development, ensuring
               everything is responsive and works well.
@@ -106,91 +98,69 @@
             <h1 class="step step-3">
               3<span class="col-proccess-dot">.</span>
             </h1>
-            <img src="images/step3.svg" />
+            <img src="images/step3.svg" alt="Step 3: Integration" />
             <p>
               Lastly, I integrate it into WordPress to make the site dynamic and
               easy to update, so it grows with your business.
             </p>
           </div>
         </div>
-      </div>
-      <div id="contactform" class="contact-form-container">
-        <h1>Let's talk</h1>
-        <div class="contact-form">
-          <form id="contactForm">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              required
-            />
+      </section>
 
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="E-mail"
-              autocomplete="e-mail"
-              required
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-              title="Please enter a valid email address"
-            />
-
-            <select id="subject" name="subject">
-              <option value="job opportunity">Job Opportunity</option>
-              <option value="project">Project Request</option>
-              <option value="other">Other</option>
-            </select>
-
-            <textarea
-              input
-              type="text"
-              id="message"
-              name="message"
-              placeholder="Message"
-              style="height: 200px"
-              required
-            ></textarea>
-
-            <input type="submit" value="Submit" />
-            <div id="warningMessage">Please fill out all fields correctly!</div>
-          </form>
-        </div>
-      </div>
-
+      <section id="contactform" class="contact-form-container">
+        <h1>Let's Talk</h1>
+        <form class="contact-form" id="contactForm">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            autocomplete="email"
+            required
+          />
+          <select id="subject" name="subject">
+            <option value="job opportunity">Job Opportunity</option>
+            <option value="project">Project Request</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            required
+          ></textarea>
+          <input type="submit" value="Submit" />
+          <div id="warningMessage">Please fill out all fields correctly!</div>
+        </form>
+      </section>
       <footer>
         <div class="contact">
-          <h3>Let's talk!</h3>
+          <h3>Let's Talk!</h3>
           <button class="footer-btn">
-            <a href="mailto:elianatasiei@gmail.com">email me</a>
+            <a href="mailto:elianatasiei@gmail.com">Email Me</a>
           </button>
           <div class="socials">
-            <img src="images/twitter.svg" />
-            <img src="images/linkedin.svg" />
-            <img src="images/github.svg" />
-            <img src="images/clip.svg" />
+            <img src="images/twitter.svg" alt="Twitter" />
+            <img src="images/linkedin.svg" alt="LinkedIn" />
+            <img src="images/github.svg" alt="GitHub" />
+            <img src="images/clip.svg" alt="Clip" />
           </div>
         </div>
         <div class="copyright">
           <p>
-            &copy; 2024 Eliana Atasiei. Designed & built by author.
-            illustrations by Undraw.
+            &copy; 2024 Eliana Atasiei. Designed & Built by Author.
+            Illustrations by Undraw.
           </p>
         </div>
       </footer>
     </div>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "avXw3jnTSPD7RwT_e",
-        });
-      })();
-    </script>
     <script src="script.js"></script>
   </body>
 </html>
