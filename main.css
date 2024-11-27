@@ -545,7 +545,7 @@ footer .copyright {
 /*************** mobile nav *********************/
 
 @media (max-width: 768px) {
-  .hero a {
+  .hero button {
     color: black;
     text-decoration: none;
   }
