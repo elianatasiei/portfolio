@@ -18,151 +18,60 @@
     <a href="#top" class="scroll-to-top" aria-label="Back to top">
       <span class="arrow">^</span>
     </a>
-    <header>
-      <div class="logo">
-        <img src="images/eliana-logo.svg" alt="eliana atasiei logo" />
-      </div>
-      <nav>
-        <div class="burger-menu">
-          <div class="burger-line"></div>
-          <div class="burger-line"></div>
-          <div class="burger-line"></div>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-            <li class="home menu-item"><a href="#top">Home</a></li>
-            <li class="about menu-item"><a href="#about">About</a></li>
-            <li class="blog menu-item"><a href="/blog.html">Blog</a></li>
-            <li class="projects menu-item">
-              <a href="#projects">Projects</a>
-              <div class="soon">SOON</div>
-            </li>
-            <li class="contact menu-item">
-              <a href="#contactform">Contact</a>
-            </li>
-          </ul>
-      </nav>
-    </header>
-      <section class="hero">
-        <div class="col-hero col-left">
-          <h1>Hi, I'm Eliana.</h1>
-          <p>
-            I <span class="hero-span">design</span> and
-            <span class="hero-span">build</span> websites. Welcome.
-          </p>
-          <div class="hero-btns">
+    <div data-include="header.html"></div>
+    <section class="hero">
+      <div class="col-hero col-left">
+        <h1>Hi, I'm Eliana.</h1>
+        <p>
+          I <span class="hero-span">design</span> and
+          <span class="hero-span">build</span> websites. Welcome.
+        </p>
+        <div class="hero-btns">
           <button class="hero-btn">Let's Connect</button>
           <button class="cv-btn">Download CV</button>
-          </div>
         </div>
-        <div class="col-hero col-right">
-          <img src="images/hero-img.svg" alt="Image of Eliana Atasiei" />
-        </div>
-      </section>
+      </div>
+      <div class="col-hero col-right">
+        <img src="images/hero-img.svg" alt="Image of Eliana Atasiei" />
+      </div>
+    </section>
 
-      <section class="about-section" id="about">
-        <h2>About</h2>
-        <p>
-          I’m a web developer who got started by teaching myself how to build
-          websites. Over time, I developed a passion for design and coding,
-          which eventually led to an apprenticeship in web development. Through
-          hands-on experience, I’ve refined my skills and now create websites
-          that are both functional and user-friendly.
-        </p>
-        <button class="explore-blog">
-          <a href="blog.html">Explore My Blog</a>
-        </button>
-      </section>
+    <div data-include="about.html"></div>
 
-      <section class="process">
-        <h1>The Process</h1>
-        <div class="col-container">
-          <div class="col-process col-1">
-            <h1 class="step step-1">
-              1<span class="col-process-dot">.</span>
-            </h1>
-            <img src="images/step1.svg" alt="Step 1: Design" />
-            <p>
-              My process begins with creating custom designs based on what I’ve
-              learned about user needs and good design.
-            </p>
-          </div>
-          <div class="col-process col-2">
-            <h1 class="step step-2">
-              2<span class="col-process-dot">.</span>
-            </h1>
-            <img src="images/step2.svg" alt="Step 2: Development" />
-            <p>
-              Once the design is ready, I move into development, ensuring
-              everything is responsive and works well.
-            </p>
-          </div>
-          <div class="col-process col-3">
-            <h1 class="step step-3">
-              3<span class="col-process-dot">.</span>
-            </h1>
-            <img src="images/step3.svg" alt="Step 3: Integration" />
-            <p>
-              Lastly, I integrate it into WordPress to make the site dynamic and
-              easy to update, so it grows with your business.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contactform" class="contact-form-container">
-        <h1>Let's Talk</h1>
-        <form class="contact-form" id="contactForm">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="E-mail"
-            autocomplete="email"
-            required
-          />
-          <select id="subject" name="subject">
-            <option value="job opportunity">Job Opportunity</option>
-            <option value="project">Project Request</option>
-            <option value="other">Other</option>
-          </select>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Message"
-            required
-          ></textarea>
-          <input type="submit" value="Submit" />
-          <div id="warningMessage">Please fill out all fields correctly!</div>
-        </form>
-      </section>
-      <footer>
-        <div class="contact">
-          <h3>Let's Talk!</h3>
-          <button class="footer-btn">
-            <a href="mailto:elianatasiei@gmail.com">Email Me</a>
-          </button>
-          <div class="socials">
-            <img src="images/twitter.svg" alt="Twitter" />
-            <img src="images/linkedin.svg" alt="LinkedIn" />
-            <img src="images/github.svg" alt="GitHub" />
-            <img src="images/clip.svg" alt="Clip" />
-          </div>
-        </div>
-        <div class="copyright">
+    <section class="process">
+      <h1>The Process</h1>
+      <div class="col-container">
+        <div class="col-process col-1">
+          <h1 class="step step-1">1<span class="col-process-dot">.</span></h1>
+          <img src="images/step1.svg" alt="Step 1: Design" />
           <p>
-            &copy; 2024 Eliana Atasiei. Designed & Built by Author.
-            Illustrations by Undraw.
+            My process begins with creating custom designs based on what I’ve
+            learned about user needs and good design.
           </p>
         </div>
-      </footer>
+        <div class="col-process col-2">
+          <h1 class="step step-2">2<span class="col-process-dot">.</span></h1>
+          <img src="images/step2.svg" alt="Step 2: Development" />
+          <p>
+            Once the design is ready, I move into development, ensuring
+            everything is responsive and works well.
+          </p>
+        </div>
+        <div class="col-process col-3">
+          <h1 class="step step-3">3<span class="col-process-dot">.</span></h1>
+          <img src="images/step3.svg" alt="Step 3: Integration" />
+          <p>
+            Lastly, I integrate it into WordPress to make the site dynamic and
+            easy to update, so it grows with your business.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="contactform.html">
+      <div data-include="footer.html"></div>
     </div>
+    <script src="include-components.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -18,46 +18,7 @@
     <a href="#top" class="scroll-to-top" aria-label="Back to top">
       <span class="arrow">^</span>
     </a>
-    <header>
-      <div class="logo">
-        <img src="images/eliana-logo.svg" alt="eliana atasiei logo" />
-      </div>
-      <nav>
-        <div class="burger-menu">
-          <div class="burger-line"></div>
-          <div class="burger-line"></div>
-          <div class="burger-line"></div>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-            <li class="home menu-item"><a href="#top">Home</a></li>
-            <li class="about menu-item"><a href="#about">About</a></li>
-            <li class="blog menu-item"><a href="#top">Blog</a></li>
-            <li class="projects menu-item">
-              <a href="#projects">Projects</a>
-              <div class="soon">SOON</div>
-            </li>
-            <li class="contact menu-item">
-              <a href="#contactform">Contact</a>
-            </li>
-          </ul>
-      </nav>
-    </header>
-      <section class="hero">
-        <div class="col-hero col-left">
-          <h1>Hi, I'm Eliana.</h1>
-          <p>
-            I <span class="hero-span">design</span> and
-            <span class="hero-span">build</span> websites. Welcome.
-          </p>
-          <div class="hero-btns">
-            <button class="hero-btn">Let's Connect</button>
-            <button class="cv-btn">Download CV</button>
-          </div>
-        </div>
-        <div class="col-hero col-right">
-          <img src="images/hero-img.svg" alt="Image of Eliana Atasiei" />
-        </div>
-      </section>
+    <div data-include="header.html"></div>
       <div class="blog-section">
         <div class="blog-post post-1">
           <h1>When You Feel Like Giving Up: Why Small Wins Matter</h1>
@@ -118,26 +79,9 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div class="contact">
-        <h3>Let's talk!</h3>
-        <button class="footer-btn">
-          <a href="mailto:elianatasiei@gmail.com">email me</a>
-        </button>
-        <div class="socials">
-          <img src="images/twitter.svg" />
-          <img src="images/linkedin.svg" />
-          <img src="images/github.svg" />
-          <img src="images/clip.svg" />
-        </div>
-      </div>
-      <div class="copyright">
-        <p>
-          &copy; 2024 Eliana Atasiei. Designed & built by author. illustrations
-          by Undraw.
-        </p>
-      </div>
-    </footer>
+    <div data-include="contactform.html"></div>
+    <div data-include="footer.html"></div>
+    <script src="include-components.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
