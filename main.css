@@ -641,6 +641,7 @@ footer .copyright {
   .process {
     padding: var(--padding-mobile-about-section);
   }
+
   .col-container {
     display: block;
   }
