@@ -176,7 +176,9 @@ body {
 /***** IMAGES/ICONS STYLES ******/
 
 /***** BUTTON STYLES ******/
-
+.hero a {
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight */
+}
 button {
   background-color: var(--color-purple);
   border: none;
