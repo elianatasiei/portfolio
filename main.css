@@ -547,6 +547,13 @@ footer .copyright {
 /*************** mobile nav *********************/
 
 @media (max-width: 768px) {
+  .hero p {
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Newer spec */
+    word-break: break-word; /* Fallback for older browsers */
+    hyphens: auto; /* Add hyphenation where possible */
+    line-height: 1.5; /* Improve readability */
+  }
   .hero button {
     color: black;
     text-decoration: none;
