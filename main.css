@@ -49,7 +49,7 @@
 
   /* MOBILE PADDINGS */
   --padding-mobile-container: 10px 50px 60px 50px;
-  --padding-mobile-header: 15px 30px;
+  --padding-mobile-header: 15px 50px;
   --padding-mobile-about-section: 100px 30px;
   --padding-mobile-process: 40px;
   --padding-mobile-contact-form: 40px 20px;
@@ -620,10 +620,9 @@ footer .copyright {
     display: block;
     width: 100%;
   }
-  .col-right{
+  .col-right {
     display: flex;
     justify-content: center;
-  }
   }
 
   /*about*/
@@ -645,5 +644,9 @@ footer .copyright {
     width: 100%;
   }
 
-  .
+  .contact-form-container {
+    padding: var(--padding-mobile-contact-form);
+    width: 100%;
+    justify-content: center;
+  }
 }
