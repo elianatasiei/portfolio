@@ -545,6 +545,9 @@ footer .copyright {
 /*************** mobile nav *********************/
 
 @media (max-width: 768px) {
+  .hero a {
+    text-decoration: none;
+  }
   header {
     padding: var(--padding-mobile-container);
     position: relative;
