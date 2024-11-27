@@ -17,7 +17,7 @@
   --font-size-xl: 28px;
   --font-size-xxl: 35px;
   --font-size-hero-h1: 50px;
-  --font-size-hero-p: 30px;
+  --font-size-hero-p: 35px;
   --font-size-step: 45px;
   --font-size-blog-h1: 40px;
   --font-size-blog-p: 21px;
@@ -28,8 +28,8 @@
   --font-size-mobile-large: 16px;
   --font-size-mobile-xl: 20px;
   --font-size-mobile-xxl: 25px;
-  --font-size-mobile-hero-h1: 35px;
-  --font-size-mobile-hero-p: 24px;
+  --font-size-mobile-hero-h1: 45px;
+  --font-size-mobile-hero-p: 27px;
   --font-size-mobile-step: 35px;
   --font-size-mobile-blog-h1: 30px;
   --font-size-mobile-blog-p: 18px;
@@ -38,20 +38,20 @@
   --height-header: 120px;
 
   /* PADDINGS */
-  --padding-container: 40px 100px 150px 100px;
-  --padding-header: 20px 80px;
+  --padding-container: 0px 100px 100px 100px;
+  --padding-header: 50px 80px;
   --padding-about-section: 150px 200px;
-  --padding-proccess: 150px;
+  --padding-process: 150px;
   --pading-contact-form: 150px 200px;
   --padding-copyright: 100px 100px 10px 100px;
   --padding-footer: 100px 200px;
   --padding-blog-post: 100px 250px 60px 250px;
 
   /* MOBILE PADDINGS */
-  --padding-mobile-container: 20px 40px 80px 40px;
+  --padding-mobile-container: 10px 50px 60px 50px;
   --padding-mobile-header: 15px 30px;
-  --padding-mobile-about-section: 50px 30px;
-  --padding-mobile-proccess: 40px;
+  --padding-mobile-about-section: 100px 30px;
+  --padding-mobile-process: 40px;
   --padding-mobile-contact-form: 40px 20px;
   --padding-mobile-copyright: 30px 30px 5px 30px;
   --padding-mobile-footer: 40px 20px;
@@ -233,7 +233,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 100px;
+  padding: var(--padding-header);
   background-color: #ffffff;
 }
 
@@ -286,7 +286,6 @@ nav {
 .nav-menu li a {
   text-decoration: none;
   color: black;
-  font-size: 18px;
   transition: color 0.3s;
 }
 
@@ -342,7 +341,8 @@ nav {
 }
 
 .col-right img {
-  width: 100%;
+  padding: 20px;
+  width: 700px;
   height: auto;
 }
 
@@ -369,11 +369,11 @@ nav {
   font-size: var(--font-size-large);
 }
 
-/*proccess*/
+/*process*/
 
-.proccess {
+.process {
   background-color: white;
-  padding: var(--padding-proccess);
+  padding: var(--padding-process);
   display: block;
 }
 
@@ -389,14 +389,14 @@ nav {
   height: auto;
 }
 
-.proccess h1 {
+.process h1 {
   color: var(--color-purple);
   font-size: var(--font-size-hero-h1);
   padding-left: 20px;
   text-align: center;
 }
 
-.col-proccess {
+.col-process {
   font-size: var(--font-size-large);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -408,17 +408,17 @@ nav {
   padding: 40px;
 }
 
-.col-proccess h1 {
+.col-process h1 {
   font-size: var(--font-size-step);
   text-align: left;
   color: black;
 }
 
-.col-proccess-dot {
+.col-process-dot {
   color: var(--color-aqua);
 }
 
-.col-proccess p {
+.col-process p {
   margin-top: 20px;
 }
 
@@ -546,8 +546,13 @@ footer .copyright {
 
 @media (max-width: 768px) {
   header {
-    padding: 40px;
+    padding: var(--padding-mobile-container);
     position: relative;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
   }
 
   .burger-menu {
@@ -573,19 +578,72 @@ footer .copyright {
   }
 
   .hero {
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+    background-color: white;
     padding: var(--padding-mobile-container);
     display: block;
     width: 100%;
     overflow: hidden; /* Prevent any overflow */
   }
 
+  .hero img {
+    max-width: 440px;
+    margin-top: 20px;
+    height: auto;
+  }
+
   .hero h1 {
+    width: 100%;
     font-size: var(--font-size-mobile-hero-h1);
   }
   .hero p {
+    width: 100%;
     font-size: var(--font-size-mobile-hero-p);
   }
+
+  .hero-btns {
+    display: flex;
+    margin: 0 auto;
+    max-width: 80%;
+    align-items: left;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-btn,
+  .cv-btn {
+    padding: 15px 20px;
+  }
   .col-hero {
+    display: block;
     width: 100%;
   }
+  .col-right{
+    display: flex;
+    justify-content: center;
+  }
+  }
+
+  /*about*/
+
+  .about-section {
+    padding: var(--padding-mobile-about-section);
+  }
+
+  /*process section*/
+  .process {
+    padding: var(--padding-mobile-about-section);
+  }
+  .col-container {
+    display: block;
+  }
+
+  .col-process {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .
 }
