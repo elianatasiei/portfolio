@@ -24,12 +24,6 @@ const observer = new IntersectionObserver(
   }
 );
 
-// Observe each paragraph element
-const textElements = document.querySelectorAll(".animated");
-textElements.forEach((element) => {
-  observer.observe(element);
-});
-
 //---------------------FORM FUNCTIONALITY
 
 const form = document.getElementById("contactForm");
