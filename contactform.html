@@ -1,6 +1,11 @@
 <section id="contactform" class="contact-form-container">
   <h1>Let's Talk</h1>
-  <form class="contact-form" id="contactForm">
+  <form
+    action="/submit-form"
+    method="POST"
+    class="contact-form"
+    id="contactForm"
+  >
     <input type="text" id="name" name="name" placeholder="Name" required />
     <input
       type="email"
